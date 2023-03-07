@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Göteborgs öl</title>
+    <link rel="stylesheet" href="dist/sortable-tables.min.css">
+    <script src="dist/sortable-tables.min.js" type="text/javascript"></script>
+</head>
+<style>
+.sortable-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.sortable-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+.sortable-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.sortable-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.sortable-table th.numeric-sort {
+  text-align: right;
+}
+
+.sortable-table td.numeric-sort {
+  text-align: right;
+}
+
+.sortable-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0px #fff, 3px 3px 0px rgba(0,0,0,0.1);
+}
+html {
+			position: relative;
+			min-height: 100%;
+			overflow-x: hidden;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			min-height: 100%;
+			overflow-x: hidden;
+		}
+    .site-footer {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 20px;
+			position: fixed;
+			bottom: 0px;
+			width: 100%; 
+      overflow-x: hidden;
+		}
+		.site-footer span {
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		.site-footer a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.site-footer a:hover {
+			text-decoration: underline;
+		}
+    .button-container {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  z-index: 9999;
+  right: 20px;
+}
+.back-button{
+  background-color: darkgray; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: auto;
+}
+.forward-button {
+  background-color: darkgray; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.back-button:hover,
+.forward-button:hover {
+  background-color:grey;
+}
+.button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: darkgrey;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: grey;
+}
+
+</style>
+<body>
+    <div class="button-container">
+        <a href="../goteborg/example.html"><button class="back-button">Föregående</button></a>
+        <a href="../uppsala/example.html"><button class="forward-button">Nästa</button></a>
+      </div>
+      <a href="../startsida.html" class="button">Hem</a>
+      <br>
+      <br>
+    <h1>Öl i Malmö</h1>
+    <div style="overflow-x:auto;">
+    <table class="sortable-table">
+        <thead>
+            <tr>
+                <th>Restaurang</th>
+                <th>Adress</th>
+                <th>Öl</th>
+                <th class="numeric-sort">Pris (SEK)</th>
+                <th class="numeric-sort">Volym (CL)</th>
+                <th class="numeric-sort">APK</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sejdeln</td>
+                <td>Andra Långgatan 28</td>
+                <td>Norrlands guld</td>
+                <td>55</td>
+                <td>50</td>
+                <td>0,91</td>
+            </tr>
+            <tr>
+                <td>King's Head</td>
+                <td>Andra Långgatan 32</td>
+                <td>Norrlands guld</td>
+                <td>39</td>
+                <td>40</td>
+                <td>0,88</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>9:ans ölhall</td>
+                <td>Andra Långgatan 9</td>
+                <td>Norrlands guld</td>
+                <td>52</td>
+                <td>50</td>
+                <td>0,95</td>
+            </tr>
+            <tr>
+                <td>Vasaplatsens Brygghus</td>
+                <td>Vasaplatsen 2</td>
+                <td>Pripps blå</td>
+                <td>59</td>
+                <td>40</td>
+                <td>0,8</td>
+            </tr>
+            <tr>
+                <td>Restaurang Olivedal</td>
+                <td>Ranängsgatan 8</td>
+                <td>Pripps blå</td>
+                <td>49</td>
+                <td>40</td>
+                <td>0,91</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+    <footer class="site-footer">
+      <span>&copy; 2023 sunkpub.se | <a href="https://twitter.com/sunkpub.se" target="_blank">@sunkpub.se</a></span>
+	</footer>
+</body>
+
+</html>
